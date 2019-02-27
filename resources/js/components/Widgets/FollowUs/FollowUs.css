@@ -1,0 +1,81 @@
+.Social {
+    padding: 0;
+    margin: 0;
+}
+
+.FollowUs a {
+    background: #1b1b1b;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #ffffff;
+    padding: 5px;
+    margin: 0 5px;
+}
+.FollowUs li {
+    list-style: none;
+    padding: 0;
+    padding-right: 10px;
+    /*margin: 0px 2px 2px 0;*/
+}
+.FollowUs li a i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.facebook i {
+    color: #3b5998 !important;
+}
+
+
+.facebook:hover {
+    background-color: #3b5998;
+}
+
+.twitter i {
+    color: #55acee !important;
+}
+
+.twitter:hover {
+    background-color: #55acee;
+}
+
+.instagram i {
+    color: #3f729b !important;
+}
+
+.instagram:hover {
+    background-color: #3f729b;
+}
+
+.telegram i {
+    color: #3eb8e5 !important;
+}
+
+.telegram:hover {
+    background-color: #3eb8e5;
+}
+
+.vk i {
+    color: #4a76a8 !important;
+}
+
+.vk:hover {
+    background-color: #4a76a8;
+}
+
+.socialIcons:hover i {
+    color:#fff;
+}

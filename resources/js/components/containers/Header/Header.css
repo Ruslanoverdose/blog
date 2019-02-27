@@ -1,0 +1,29 @@
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    background: linear-gradient(45deg, #13547a 0%, #80d0c7 100%);
+    color: #fff;
+}
+
+.headerBlock {
+    text-align: center;
+}
+
+.mainHeaderText {
+    padding: 20px 0;
+}
+
+.mainHeaderText h1 {
+    font-weight: 300;
+    font-size: 3.5em;
+    color: #fff;
+}
+
+.bottomHeaderText h5 {
+    font-weight: 400;
+    line-height: 1.5em;
+    font-size: 18px;
+    color: #fff;
+}

@@ -1,0 +1,53 @@
+.shareBlock {
+
+}
+
+.shareMenu {
+    width: 150px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -2px rgba(0, 0, 0, 0.2), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
+    position: absolute;
+    bottom: 1px;
+    right: -29px;
+    display: block;
+    background: #fff;
+}
+
+.shareMenu li {
+    display: block;
+    padding: 10px;
+}
+.shareMenu li a {
+}
+
+.shareMenu li a .shareIcon:hover {
+    color: #ff5722;
+}
+
+.shareMenu li a i {
+    margin-right: 10px;
+}
+
+.shareMenu li:hover {
+    background: #e2e2e2;
+}
+
+.shareMenuGrid {
+    display: grid;
+    grid-template-columns: 20px 2fr; 
+}
+
+.shareIcon {
+
+}
+
+.shareTitle {
+
+}
+
+.Show {
+    display: block;
+}
+
+.Hide {
+    display: none;
+}

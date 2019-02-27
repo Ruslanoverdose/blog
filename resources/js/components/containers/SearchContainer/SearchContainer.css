@@ -1,0 +1,72 @@
+section {
+    transition: .3s all ease;
+}
+
+.searchContainer  {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    margin: 0;
+    z-index: 99;
+}
+
+.buttonBlock {
+    width: 100%;
+    position: relative;
+}
+
+.Close  {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+
+
+
+.Hidden {
+    display: none;
+    opacity: 0;
+}
+
+.Show {
+    display: block;
+    opacity: 1;
+}
+
+.formBlock {
+    margin-top: 10px;
+}
+
+.searchBlock {
+    margin-top: 40px;
+}
+
+.searchTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.searchInf {
+    margin-top: 10px;
+    color: #707070;
+}
+
+.searchBlock input {
+    width: 100%;
+}
+.searchBlock input, .searchBlock label {
+    color: #707070;
+}
+.searchBlock input:focus {
+    color: #707070
+}

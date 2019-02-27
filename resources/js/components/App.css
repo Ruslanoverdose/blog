@@ -1,0 +1,115 @@
+a {
+    text-decoration: none;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: #ff5722;
+}
+
+img {
+    width: 100%;
+}
+
+section, header {
+    margin-bottom: 30px;
+}
+
+.wrapper {
+    display: grid;
+    overflow: inherit;
+    position: relative;
+}
+
+#root {
+    overflow: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    height: 100%;
+}
+
+.MainFooter {
+    position: relative;
+}
+
+
+form {
+    width: 100%;
+}
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+label, input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+input {
+    font-size: 1.5em;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    cursor: text;
+    background: transparent;
+    padding: 4px 7px;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #ff5722;
+    color: #fff;
+}
+
+label {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1em;
+
+}
+
+input:placeholder-shown + label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+}
+
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+    color: #fff;
+    font-weight: 300;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+    color: #ff5722;
+
+}
+
+
+section.Posts {
+    padding-top: 40px;
+}

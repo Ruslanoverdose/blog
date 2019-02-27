@@ -1,0 +1,37 @@
+.widgetPosts {
+
+}
+
+.widgetPost {
+    display: grid;
+    grid-template-columns: 70px 150px;
+    grid-column-gap: 7px;
+    margin-bottom: 6px;
+}
+
+.widgetPost h4, .widgetPostContent .widgetPostDate, .widgetPost i  {
+    color:#909090;
+    font-weight: 300;
+    transition: 0.2s all ease-in-out;
+}
+
+.widgetPost:hover h4, .widgetPost:hover .widgetPostDate, .widgetPost:hover i {
+    color:#fff;
+}
+
+.widgetPostPreview {
+
+}
+
+.widgetPostPreview img {
+    width: 100%;
+}
+
+.widgetPostContent {
+
+}
+
+
+.widgetPostDate {
+    font-size: .8rem;
+}

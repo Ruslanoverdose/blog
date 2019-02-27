@@ -1,0 +1,120 @@
+
+.MenuContainer {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    transition: all .3s;
+    z-index: 3;
+}
+
+.row {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-template-columns: 15% 1fr 5%;
+    grid-column-gap: 10px;
+    align-items: center;
+}
+
+.logo h5 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.MenuContainerFixed .logo h5 {
+    color: #464646;
+}
+
+.searchButton i,.searchButton i a {
+    color: #fff;
+}
+
+
+.searchButton {
+
+}
+
+.MenuContainerFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: #fff;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+.MenuContainerFixed .menu a {
+    color: #464646;
+}
+
+.menu {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.searchButton {
+    font-weight: 300;
+}
+
+.searchButton button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.MenuContainerFixed .searchButton i {
+    color: #464646;
+}
+
+.menu a {
+    color: #fff;
+    padding: 25px 15px;
+    position: relative;
+}
+
+.menu a:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    height: 4px;
+    transform: scale(0,1);
+    transform-origin: 50% 50%;
+    transition: all .3s;
+}
+
+.menu a:hover:before {
+    transform: scale(1,1);
+}
+
+.MenuContainerFixed .menu a:before {
+    background: #ff5722;
+}
+
+.active:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    margin: auto;
+    background-color: #fff;
+    height: 4px;
+    transform: scale(0,1);
+    transition: all .3s ease-in-out;
+}
+
+
+
+li {
+    list-style: none;
+    display: inline-block;
+    font-size: 14px;
+}

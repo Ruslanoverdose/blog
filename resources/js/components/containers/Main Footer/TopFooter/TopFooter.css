@@ -1,0 +1,18 @@
+.TopFooter {
+    padding: 26px 0 14px;
+    background: #232323;
+}
+.TopFooterBlock {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+}
+.TopFooterColumn1 {
+
+}
+.TopFooterColumn2 {
+
+}
+.TopFooterColumn3 {
+
+}
+

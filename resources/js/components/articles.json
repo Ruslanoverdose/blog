@@ -1,0 +1,39 @@
+[
+    {
+        "index": 1,
+        "title": "BIKE IS MY PASSION 1",
+        "author" : "Alex Cooper",
+        "date" : "28 September 2018",
+        "category" : "LifeStyle",
+        "tags" : [
+            "Travel", "LifeStyle"
+        ],
+        "shortText" : "Hello bubblers. Riding a motorcycle is my passion. I dont know how i get so attracted towards motorbikes. Whenever i see any new outstanding motorbike around me it makes me feel like Ghost rider",
+        "fullText" : "Hello bubblers. Riding a motorcycle is my passion. I dont know how i get so attracted towards motorbikes. Whenever i see any new outstanding motorbike around me it makes me feel like Ghost rider. I have traveled so many miles on my motorbike.I have learned to ride a bike in 8th standard and have been riding consistently since then."
+    },
+    {
+        "index": 2,
+        "title": "BIKE IS MY PASSION 2",
+        "author" : "Alex Cooper",
+        "date" : "28 September 2018",
+        "category" : "LifeStyle",
+        "tags" : [
+            "Travel", "LifeStyle"
+        ],
+        "shortText" : "Hello bubblers. Riding a motorcycle is my passion. I dont know how i get so attracted towards motorbikes. Whenever i see any new outstanding motorbike around me it makes me feel like Ghost rider",
+        "fullText" : "Hello bubblers. Riding a motorcycle is my passion. I dont know how i get so attracted towards motorbikes. Whenever i see any new outstanding motorbike around me it makes me feel like Ghost rider. I have traveled so many miles on my motorbike.I have learned to ride a bike in 8th standard and have been riding consistently since then."
+    },
+    {
+        "index": 3,
+        "title": "BIKE IS MY PASSION 3",
+        "author" : "Alex Cooper",
+        "date" : "28 September 2018",
+        "category" : "LifeStyle",
+        "tags" : [
+            "Travel", "LifeStyle"
+        ],
+        "shortText" : "Hello bubblers. Riding a motorcycle is my passion. I dont know how i get so attracted towards motorbikes. Whenever i see any new outstanding motorbike around me it makes me feel like Ghost rider",
+        "fullText" : "Hello bubblers. Riding a motorcycle is my passion. I dont know how i get so attracted towards motorbikes. Whenever i see any new outstanding motorbike around me it makes me feel like Ghost rider. I have traveled so many miles on my motorbike.I have learned to ride a bike in 8th standard and have been riding consistently since then."
+    }
+    
+]

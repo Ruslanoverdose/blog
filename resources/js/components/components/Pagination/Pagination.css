@@ -1,0 +1,45 @@
+.Pagination {
+    text-transform: uppercase;
+}
+
+.paginationBlock {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33% 33% minmax(33%, 1fr));
+    font-size: 18px;
+}
+.leftSidePagination {}
+.countPages {
+    text-align: center;
+    color: #909090;
+}
+
+.olderPosts {
+    text-align: right;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    -ms-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.olderPosts a, .olderPosts i {
+    color: #909090;
+}
+
+.olderPosts:hover a, .olderPosts:hover i {
+    color: #ff5722;
+}
+
+.olderPosts i {
+    margin-left: 4px;
+}
+
+
+@media (max-width: 600px) {
+    .leftSidePagintion,.countPages {
+        visibility: hidden;
+    }
+    .olderPosts {
+        text-align: right;
+    }
+}
