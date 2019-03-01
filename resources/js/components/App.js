@@ -44,7 +44,8 @@ class App extends Component {
             <MenuContainer searchOpened ={this.searchIsOpened} isFixed={this.state.isFixed}/>
             <Header/>
             <Switch>
-                <Route path={"/post/:id"} exact component={PostContainer}/>
+                <Route path={"/articles/:id"} exact component={PostContainer}/>
+                <Route path={"/articles"} exact component={PostsContainer}/>
                 <Route path={"/about"}/>
                 <Route path={"/contact"}/>
                 <Route path={"/tags"}/>

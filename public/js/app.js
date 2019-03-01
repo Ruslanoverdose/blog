@@ -6639,7 +6639,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n    font-family: 'Roboto', sans-serif;\n    color: #464646;\n    transition: 300ms all ease;\n}\n\n", ""]);
+exports.push([module.i, "* {\n    padding: 0;\n    margin: 0;\n    font-family: 'Roboto', sans-serif;\n    color: #464646;\n    transition: 300ms all ease;\n    word-break: break-word;\n}\n\n", ""]);
 
 // exports
 
@@ -68042,9 +68042,13 @@ function (_Component) {
         searchOpened: this.searchIsOpened,
         isFixed: this.state.isFixed
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
-        path: "/post/:id",
+        path: "/articles/:id",
         exact: true,
         component: _containers_PostContainer_PostContainer__WEBPACK_IMPORTED_MODULE_7__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
+        path: "/articles",
+        exact: true,
+        component: _containers_PostsContainer_PostsContainer__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
         path: "/about"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
@@ -68941,11 +68945,6 @@ function (_Component) {
         className: "tagList"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-list-ul"
-      }), this.props.tags.map(function (tag, index) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["NavLink"], {
-          to: "/tag/nature/",
-          key: index
-        }, tag);
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "postDesc"
       }, this.props.short, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShareList_ShareList__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -68955,7 +68954,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "readMore"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["NavLink"], {
-        to: "/post/" + this.props.index
+        to: "/articles/" + this.props.index
       }, "read more ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-arrow-right"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -69817,11 +69816,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var _articles_json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../articles.json */ "./resources/js/components/articles.json");
 var _articles_json__WEBPACK_IMPORTED_MODULE_7___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../articles.json */ "./resources/js/components/articles.json", 1);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -69848,6 +69845,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var PostContainer =
 /*#__PURE__*/
 function (_Component) {
@@ -69860,17 +69858,19 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(PostContainer).call(this, props));
     _this.state = {
-      article: {
-        index: 0,
-        title: "",
-        author: "",
-        date: "",
-        category: "",
-        tags: [],
-        shortText: "",
-        fullText: "",
-        key: 0
-      }
+      // article: {
+      //     index: 0,
+      //     title: "",
+      //     author : "",
+      //     date : "",
+      //     category : "",
+      //     tags : [
+      //     ],
+      //     shortText : "",
+      //     fullText : "",
+      //     key: 0
+      // }
+      article: {}
     };
     return _this;
   }
@@ -69880,16 +69880,14 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var a = {};
-      _articles_json__WEBPACK_IMPORTED_MODULE_7__.map(function (article, index) {
-        if (parseInt(article.index) === parseInt(_this2.props.match.params.id)) {
-          a = _objectSpread({}, article, {
-            key: index
-          });
-        }
-      });
-      this.setState({
-        article: a
+      axios__WEBPACK_IMPORTED_MODULE_8___default.a.get('/api/articles/' + this.props.match.params.id).then(function (response) {
+        console.log(response);
+
+        _this2.setState({
+          article: response.data
+        });
+      }).catch(function (error) {
+        console.log(error);
       });
     }
   }, {
@@ -70132,13 +70130,32 @@ var PostsContainer =
 function (_Component) {
   _inherits(PostsContainer, _Component);
 
-  function PostsContainer() {
+  function PostsContainer(props) {
+    var _this;
+
     _classCallCheck(this, PostsContainer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(PostsContainer).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(PostsContainer).call(this, props));
+    _this.state = {
+      articles: []
+    };
+    return _this;
   }
 
   _createClass(PostsContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('/api/').then(function (response) {
+        return response.json();
+      }).then(function (articles) {
+        _this2.setState({
+          articles: articles
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -70148,16 +70165,15 @@ function (_Component) {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "postsBlock"
-      }, _articles_json__WEBPACK_IMPORTED_MODULE_5__.map(function (article, index) {
+      }, this.state.articles.map(function (article, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Posts_Posts__WEBPACK_IMPORTED_MODULE_3__["default"], {
           key: index,
-          index: article.index,
+          index: article.id,
           title: article.title,
-          author: article.author,
-          date: article.date,
-          category: article.category,
+          category: article.category_id,
           short: article.shortText,
-          tags: article.tags
+          full: article.fullText,
+          cover: article.cover
         });
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
     }

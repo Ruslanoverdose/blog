@@ -6,23 +6,39 @@ import Pagination from "../../components/Pagination/Pagination";
 import articles from '../../articles.json'
 
 export default class PostsContainer extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            articles: [],
+        }
+    }
+    componentDidMount() {
+        fetch('/api/')
+        .then(response => {
+            return response.json()
+        })
+        .then(articles => {
+            this.setState({articles: articles })
+        });
+    }
     render() {
         return(
             <section id="Posts" className={"Posts"}>
                <div className={"container"}>
                     <div className={"postsBlock"}>
                     {
-                        articles.map((article, index) => {
+                        this.state.articles.map((article, index) => {
                             return (
                                 <Posts 
                                     key = {index}
-                                    index={article.index}
+                                    index={article.id}
                                     title={article.title} 
-                                    author={article.author} 
-                                    date={article.date} 
-                                    category={article.category} 
+                                    category={article.category_id} 
                                     short={article.shortText} 
-                                    tags={article.tags}
+                                    full={article.fullText} 
+                                    cover={article.cover} 
                                 />
                             )
                         })

@@ -6,36 +6,38 @@ import nextImg from "../../assets/images/woman.jpg";
 import mainClasses from '../../App.css'
 import {NavLink} from 'react-router-dom'
 import articles from '../../articles.json'
-
+import axios from 'axios'
 export default class PostContainer extends Component {
 
     constructor(props) {
         super(props)
 
         this.state = {
-            article: {
-                index: 0,
-                title: "",
-                author : "",
-                date : "",
-                category : "",
-                tags : [
+            // article: {
+            //     index: 0,
+            //     title: "",
+            //     author : "",
+            //     date : "",
+            //     category : "",
+            //     tags : [
                     
-                ],
-                shortText : "",
-                fullText : "",
-                key: 0
-            }
+            //     ],
+            //     shortText : "",
+            //     fullText : "",
+            //     key: 0
+            // }
+            article: {}
         }
     }
     componentDidMount() {
-        let a = {}
-        articles.map((article, index) => {
-            if (parseInt(article.index) === parseInt(this.props.match.params.id)) {
-                a = {...article, key: index}
-            }
-        })
-        this.setState({article: a})
+        axios.get('/api/articles/'+this.props.match.params.id)
+            .then(response => {
+                console.log(response)
+                this.setState({article: response.data})
+            })
+            .catch(function(error) {
+                console.log(error)
+            })
     }
     
     render() {

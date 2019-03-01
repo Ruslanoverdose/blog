@@ -35,12 +35,12 @@ export default class Posts extends Component {
                         <span className={"Comment"}><NavLink to="/benefits-of-rose/#disqus_thread"><i className="far fa-comment-alt"></i>1 Comment</NavLink></span>
                         <span className={"tagList"}>
                         <i className="fas fa-list-ul"></i>
-                            {this.props.tags.map((tag, index) => {
+                            {/* {this.props.tags.map((tag, index) => {
                                     return (
                                         <NavLink to="/tag/nature/" key={index}>{tag}</NavLink>
                                     )
                                 }
-                            )}
+                            )} */}
                             
                         </span>
                     </div>
@@ -51,7 +51,7 @@ export default class Posts extends Component {
                 </div>
                 <div className={"cardFooter"}>
                     <div className={"readMore"}>
-                        <NavLink to={"/post/" + this.props.index}>
+                        <NavLink to={"/articles/" + this.props.index}>
                             read more <i className="fas fa-arrow-right"></i>
                         </NavLink>
 
