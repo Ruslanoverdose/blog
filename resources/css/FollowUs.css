@@ -35,47 +35,47 @@
     border-radius: 50%;
 }
 
-.facebook i {
+.FollowUs .facebook i {
     color: #3b5998 !important;
 }
 
 
-.facebook:hover {
+.FollowUs .facebook:hover {
     background-color: #3b5998;
 }
 
-.twitter i {
+.FollowUs .twitter i {
     color: #55acee !important;
 }
 
-.twitter:hover {
+.FollowUs .twitter:hover {
     background-color: #55acee;
 }
 
-.instagram i {
+.FollowUs .instagram i {
     color: #3f729b !important;
 }
 
-.instagram:hover {
+.FollowUs .instagram:hover {
     background-color: #3f729b;
 }
 
-.telegram i {
+.FollowUs .telegram i {
     color: #3eb8e5 !important;
 }
 
-.telegram:hover {
+.FollowUs .telegram:hover {
     background-color: #3eb8e5;
 }
 
-.vk i {
+.FollowUs .vk i {
     color: #4a76a8 !important;
 }
 
-.vk:hover {
+.FollowUs .vk:hover {
     background-color: #4a76a8;
 }
 
-.socialIcons:hover i {
-    color:#fff;
+.FollowUs .socialIcons:hover i {
+    color:#fff !important;
 }

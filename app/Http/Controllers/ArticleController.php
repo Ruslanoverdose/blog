@@ -9,16 +9,23 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        return Article::all();
+        $articles = Article::all();
+        return $articles;
     }
  
     public function show($id)
     {
         
         $item = Article::find($id);
-        return $item;
+        $cat = $item->category;
+        $arr = [$item, $cat];
+        return response()->json($arr, 201);
     }
- 
+    public function getCategory($id) 
+    {
+        $category = Article::find($id)->category;
+        return $category;
+    }
     public function store(Request $request)
     {
         $article = Article::create($request->all());

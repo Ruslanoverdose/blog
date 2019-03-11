@@ -1,6 +1,4 @@
 import React from 'react'
-import mainClasses from "../Widget.css";
-import classes from "./FollowUs.css";
 
 export default (props) => {
     const iconClass =  " " + "socialIcons";

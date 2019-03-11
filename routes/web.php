@@ -14,7 +14,18 @@ use App\Article;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/articles/{id}', function () {
+    return view('welcome');
+});
+Route::get('/articles/', function () {
+    return view('welcome');
+});
 
-Route::get('/article', function() {
-    return view('article');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware(['checkRole'])->group(function() {
+    Route::get('/admin/dashboard', "DashboardController@index");
 });

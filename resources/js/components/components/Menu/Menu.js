@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from "../../containers/MenuContainer/MenuContainer.css";
 import {NavLink} from "react-router-dom";
 
 export default () => {

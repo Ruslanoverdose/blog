@@ -1,5 +1,4 @@
 import React from 'react'
-import classes from './TopScroll.css'
 import arrow from '../../assets/images/arrowUp.png'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 

@@ -21,6 +21,8 @@ class CreateArticlesTable extends Migration
             $table->string('cover');
             $table->integer('user_id');
             $table->integer('category_id');
+            $table->integer('enable')->default(0);
+            $table->dateTime('dateEnabled');
             $table->timestamps();
         });
     }

@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.avatar {
+  border-radius: 100%;
+}
+
+.avatar img {
+  width: 100%;
+}
+

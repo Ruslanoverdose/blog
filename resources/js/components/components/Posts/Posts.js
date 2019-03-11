@@ -1,14 +1,15 @@
 import React, {Component} from 'react'
-import classes from "./Posts.css";
 import previewImg from "../../assets/images/iphone.jpg";
 import {NavLink} from "react-router-dom";
 import ShareList from '../ShareList/ShareList';
+import axios from 'axios';
 
 export default class Posts extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            menuShareIsOpen: false 
+            menuShareIsOpen: false, 
+            category: []
         }
 
         this.openMenu = this.openMenu.bind(this)
@@ -17,6 +18,16 @@ export default class Posts extends Component {
         this.setState({
             menuShareIsOpen: this.state.menuShareIsOpen ? false : true
         })
+    }
+    componentDidMount() {
+        axios.get('/api/articles/'+ this.props.index)
+            .then(cat => {
+                const c = {...cat.data[1]}
+                this.setState({category: c})
+            })
+            .catch(function(error) {
+                console.log(error)
+            })
     }
     render() {
         return(
@@ -35,13 +46,9 @@ export default class Posts extends Component {
                         <span className={"Comment"}><NavLink to="/benefits-of-rose/#disqus_thread"><i className="far fa-comment-alt"></i>1 Comment</NavLink></span>
                         <span className={"tagList"}>
                         <i className="fas fa-list-ul"></i>
-                            {/* {this.props.tags.map((tag, index) => {
-                                    return (
-                                        <NavLink to="/tag/nature/" key={index}>{tag}</NavLink>
-                                    )
-                                }
-                            )} */}
-                            
+                            {
+                                this.state.category.title
+                            }                            
                         </span>
                     </div>
                     <div className={"postDesc"}>

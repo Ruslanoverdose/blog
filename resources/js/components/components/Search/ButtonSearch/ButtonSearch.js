@@ -1,5 +1,4 @@
 import React from 'react'
-import classes from "../../../containers/MenuContainer/MenuContainer.css";
 
 export default props => {
     return (

@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import classes from "./Pagination.css";
-import mainClasses from "../../App.css";
 
 export default class Pagination extends Component {
     render() {

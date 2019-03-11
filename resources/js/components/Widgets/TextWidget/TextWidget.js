@@ -1,6 +1,4 @@
 import React from 'react'
-import mainClasses from "../Widget.css";
-import classes from "./TextWidget.css";
 
 export default (props) => {
     return(

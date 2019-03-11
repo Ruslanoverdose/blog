@@ -1,5 +1,4 @@
 import React from 'react'
-import classes from './ShareList.css'
 import {NavLink} from "react-router-dom";
 function ShareList(props) {
     const isOpen = props.isOpen ? "Show" : "Hide"

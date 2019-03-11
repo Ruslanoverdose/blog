@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import mainClasses from "../Widget.css";
-import classes from "./WidgetPosts.css";
 import previewImg from "../../assets/images/iphone.jpg";
 
 export default (props) => {

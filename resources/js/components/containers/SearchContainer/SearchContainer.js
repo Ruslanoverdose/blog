@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import mainClasses from '../../App.css'
-import classes from './SearchContainer.css'
 
 export default class PostsContainer extends Component {
     render() {
@@ -21,7 +19,7 @@ export default class PostsContainer extends Component {
                     </div>
                     <div className={"formBlock"}>
                         <form>
-                            <div className={mainClasses.field}>
+                            <div className={"field"}>
                                 <input type="text" name="searchInput" id="searchInput" placeholder=" " />
                                 <label htmlFor="searchInput">Введите запрос</label>
                             </div>

@@ -20,8 +20,10 @@ class ArticlesTableSeeder extends Seeder
                 'shortText' => Str::random(150),
                 'fullText' => Str::random(500),
                 'cover' => Str::random(10).".jpg",
-                'user_id' => rand(0,10),
-                'category_id' => rand(0,10)
+                'user_id' => rand(1,10),
+                'category_id' => rand(1,10),
+                'enable' => 1,
+                'dateEnabled' => date("Y-m-d H:i:s")
             ]);
         }
         

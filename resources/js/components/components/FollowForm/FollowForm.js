@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import formClasses from "./FollowForm.css";
-import appCss from "./../../App.css";
 
 export default class FollowForm extends Component {
     render() {

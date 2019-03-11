@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import mainClasses from '../../../App.css'
-import classes from './NewsLetter.css'
 import FollowForm from "../../../components/FollowForm/FollowForm";
 
 export default class NewsLetter extends Component {

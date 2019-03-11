@@ -20,5 +20,6 @@ use Illuminate\Http\Request;
 Route::get('/', 'ArticleController@index');
 Route::get('articles', 'ArticleController@store');
 Route::get('articles/{id}', 'ArticleController@show');
+Route::get('articles/{id}/category', 'ArticleController@getCategory');
 Route::put('articles/{id}', 'ArticleController@update');
 Route::delete('articles/{id}', 'ArticleController@delete');

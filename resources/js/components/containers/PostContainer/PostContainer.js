@@ -1,11 +1,8 @@
 import React, {Component} from 'react'
-import classes from './PostContainer.css'
 import previewImg from "../../assets/images/iphone.jpg";
 import prevImg from "../../assets/images/grandpa.jpg";
 import nextImg from "../../assets/images/woman.jpg";
-import mainClasses from '../../App.css'
 import {NavLink} from 'react-router-dom'
-import articles from '../../articles.json'
 import axios from 'axios'
 export default class PostContainer extends Component {
 
@@ -13,27 +10,14 @@ export default class PostContainer extends Component {
         super(props)
 
         this.state = {
-            // article: {
-            //     index: 0,
-            //     title: "",
-            //     author : "",
-            //     date : "",
-            //     category : "",
-            //     tags : [
-                    
-            //     ],
-            //     shortText : "",
-            //     fullText : "",
-            //     key: 0
-            // }
-            article: {}
+            article: {},
+            category: {}
         }
     }
     componentDidMount() {
         axios.get('/api/articles/'+this.props.match.params.id)
             .then(response => {
-                console.log(response)
-                this.setState({article: response.data})
+                this.setState({article: response.data[0], category: response.data[1]})
             })
             .catch(function(error) {
                 console.log(error)
@@ -71,7 +55,7 @@ export default class PostContainer extends Component {
                                         {this.state.article.date}
                                         </span>
                                         <span className={"Comment"}><NavLink to="/benefits-of-rose/#disqus_thread"><i className="far fa-comment-alt"></i>1 Comment</NavLink></span>
-                                        <span className={"tagList"}><i className="fas fa-list-ul"></i>{this.state.article.category}</span>
+                                        <span className={"tagList"}><i className="fas fa-list-ul"></i>{this.state.category.title}</span>
                                     </div>
                                 </div>
                                 <div className={"articleCover"}>

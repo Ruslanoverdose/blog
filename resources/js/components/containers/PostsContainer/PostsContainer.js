@@ -1,9 +1,6 @@
 import React, {Component} from 'react'
-import mainClasses from '../../App.css'
-import classes from './PostsContainer.css'
 import Posts from "../../components/Posts/Posts";
 import Pagination from "../../components/Pagination/Pagination";
-import articles from '../../articles.json'
 
 export default class PostsContainer extends Component {
 
@@ -15,12 +12,9 @@ export default class PostsContainer extends Component {
         }
     }
     componentDidMount() {
-        fetch('/api/')
+        axios.get('/api/')
         .then(response => {
-            return response.json()
-        })
-        .then(articles => {
-            this.setState({articles: articles })
+            this.setState({articles: response.data})
         });
     }
     render() {

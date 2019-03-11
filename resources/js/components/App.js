@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import classes from './App.css';
 import Header from './containers/Header/Header'
 import MenuContainer from "./containers/MenuContainer/MenuContainer";
 import PostsContainer from "./containers/PostsContainer/PostsContainer";
@@ -27,7 +26,7 @@ class App extends Component {
 
     componentDidMount() {
       window.addEventListener('scroll', () => this.handleScroll())
-  }
+    }
     handleScroll() {
         const scroll = document.documentElement.scrollTop
         this.setState({
@@ -40,7 +39,7 @@ class App extends Component {
     }
     render() {
     return (
-      <div className={classes.wrapper}>
+      <div className={"wrapper"}>
             <MenuContainer searchOpened ={this.searchIsOpened} isFixed={this.state.isFixed}/>
             <Header/>
             <Switch>

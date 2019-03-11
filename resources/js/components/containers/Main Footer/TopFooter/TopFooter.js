@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import mainClasses from '../../../App.css'
-import classes from './TopFooter.css'
 import WidgetPosts from "../../../Widgets/WidgetPosts/WidgetPosts";
 import TagCloud from "../../../Widgets/TagCloud/TagCloud";
 import FollowUs from "../../../Widgets/FollowUs/FollowUs";
